@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<title>Figure</title>
+		<meta charset="utf-8" />
+		<style>
+			#fig1{
+				color: blue;
+			}
+			
+			#fig1 span{
+				font-weight: bold;
+			}
+			
+			p{
+				text-align: justify;
+			}
+		</style>
+		
+		<script>
+			document.addEventListener("DOMContentLoaded", function(){
+				var figuras = {"figuras" : [
+					{"url" : "balao.png", "legenda" : "Balão Azul, em um lindo céu"},
+					{"url" : "arvore.png", "legenda" : "Floresta cheia de Árvores"},
+					{"url" : "casinha.png", "legenda" : "Casinha do Ted"}
+				]};
+				
+				var obj = JSON.parse = figuras;
+				
+				var figureIndex = 1;
+				var figureTotal = 3;
+				var time = 2000;
+				var img = document.getElementById("img");
+				var caption = document.getElementById("caption");
+				
+				setInterval(function(){
+					if(figureIndex == figureTotal){
+						figureIndex = 1;
+					}else{
+						figureIndex++;
+					}
+					alternate(figureIndex);
+				}, time);
+				
+				function alternate(figureIndex){
+					img.src = obj.figuras[figureIndex - 1].url;
+					caption.innerHTML = obj.figuras[figureIndex - 1].legenda;
+				}								
+			}, false);
+		</script>
+	</head>
+	<body>
+		<figure id="fig1">
+		  <img src="modelo1.jpg" alt="Balão" id="img" />
+		  <figcaption id="caption"></figcaption>
+		</figure>
+	</body>
+</html>
