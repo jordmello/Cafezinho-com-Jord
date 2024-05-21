@@ -2,6 +2,113 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
+.menu {
+
+  background-color: #d2bead;
+
+  color: white;
+
+  padding: 10px;
+
+}
+
+.menu-item {
+
+  display: inline-block;
+
+  position: relative;
+
+}
+
+.submenu {
+
+  background-color: #d2bead;
+
+  padding: 10px;
+
+  display: none;
+
+  position: absolute;
+
+  top: 100%;
+
+  left: 0;
+
+}
+
+.menu a {
+
+  color: white;
+
+  text-decoration: none;
+
+  padding: 5px 10px;
+
+  display: block;
+
+}
+
+.menu a:hover {
+
+  background-color: #ddd;
+  border-radius:40px;
+  color: black;
+
+}
+
+.menu-item:hover .submenu {
+
+  display: block;
+
+}
+
+
+.div{
+  background-color: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 80px;
+  border-radius: 15px;
+  color: #fff;
+}
+
+.input{
+  padding: 15px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+.button{
+  background-color: dodgerblue;
+  border: none;
+  padding: 15px;
+  width: 100%;
+  border-radius: 10px;
+  color: white;
+  font-size: 15px;
+  
+}
+.button:hover{
+  background-color: deepskyblue;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -113,7 +220,7 @@ body {
 
 /* -------------------------------------------------- CABEÇALHO ----------------------------------------------*/
 .boxcabecalho{
-  width:30%;
+  width:50%;
   height: 60px;
   float:none;
   background-color: #d2bead;
@@ -220,7 +327,14 @@ body {
   gap: 24px;
 }
 /* --------------------------------------------------  FIM ----------------------------------------------*/
-
+.boxinicial{
+  width: 90%;
+  height: 500px;
+  float:none;
+  background-color: #584330;
+  margin:48px;
+  border-radius:40px;
+}
 /* -------------------------------------------------- PÁGINA SOBRE ----------------------------------------------*/
 .box{
   width: 90%;
@@ -362,6 +476,11 @@ height: 400px;
   text-align: justify;
 }
 /* -------------------------------------------------- FIM ----------------------------------------------*/
+
+
+
+/* -------------------------------------------------- TRABALHOS ----------------------------------------------*/
+
 .imagem-trabalho{
 height: 150px;
 
@@ -374,17 +493,17 @@ height: 150px;
   margin:48px;
   border-radius:40px;
 }
-
 .conteudo-secundario-trabalhos {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0px;
 }
-
 .conteudo-secundario-paragrafo-trabalhos {
   font-family: 'Sarala', sans-serif;
   font-weight: 300;
   font-size: 18px;
   color: #ECD6C4;
 }
+
+/* -------------------------------------------------- FIM ----------------------------------------------*/
